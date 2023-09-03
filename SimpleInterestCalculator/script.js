@@ -1,13 +1,14 @@
 function compute()
 {
     
-    var principal =  document.getElementById("principal").value;
+    var principal = document.getElementById("principal").value;
     var rate= document.getElementById("rate").value;
     var years = document.getElementById("years").value;
 
-    var parPrincipal = parseInt(principal);
-    var parRate = parseFloat(rate);
-    var parYears = parse(years);
+    var parPrincipal = principal;
+    var parRate = rate;
+    var parYears = years;
+
 
     if(parPrincipal == 0 || parPrincipal < 0){
         alert("Enter a positive number");
@@ -16,14 +17,14 @@ function compute()
     else{
     var interest = parPrincipal * parYears * (parRate / 100);
     var parInterest = parseFloat(interest);
-    var amount = parPrincipal + parInterest;
+    var amount = parseInt(parPrincipal) + parInterest;
     var result = document.getElementById("result");
 
     var date = new Date();
     var NYears = parYears + date.getFullYear();
     
     
-    result.innerHTML = "If you deposit $" + "<mark>" + principal + "</mark>" + ",\<br\> at an interest rate of " + "<mark>" + rate + "%" + "</mark>" + "\<br\> You will receive an amount of $" + "<mark>" + amount + "</mark>" + ",\<br\> in the year " + "<mark>" + year + "</mark>" + "\<br\>";
+    result.innerHTML = "If you deposit $" + "<mark>" + parseInt(principal) + "</mark>" + ",\<br\> at an interest rate of " + "<mark>" + parseFloat(rate) + "%" + "</mark>" + "\<br\> You will receive an amount of $" + "<mark>" + amount + "</mark>" + ",\<br\> in the year " + "<mark>" + NYears + "</mark>" + "\<br\>";
     }
     
 
@@ -37,6 +38,7 @@ function updateRate(){
     var date = getFullYear();
  
 }
+        
         
 function alertDate(){
 
