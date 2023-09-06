@@ -1,0 +1,14 @@
+ssh-keygen -t rsa
+
+git config --global user.email "luizardezzoni2301@gmail.com"
+ git config --global user.name "Luiz Ardezzoni"
+
+ git clone git@github.com:lardezzoni/expressBookReviews.git
+
+git status
+
+git add --all
+
+git commit
+
+git push
