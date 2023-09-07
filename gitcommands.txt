@@ -1,5 +1,7 @@
 ssh-keygen -t rsa
 
+cat /home/theia/.ssh/id_rsa.pub
+
 git config --global user.email "luizardezzoni2301@gmail.com"
  git config --global user.name "Luiz Ardezzoni"
 
